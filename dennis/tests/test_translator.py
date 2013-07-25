@@ -208,3 +208,8 @@ class TranslatorTest(TestCase):
         trans = Translator(['python'], ['shouty', 'html', 'pirate'])
         eq_(trans.translate_string(u'<b>hello.</b>\n'),
             u'<b>HELLO aye\u2757.</b>\n')
+
+    def test_trololo_translate(self):
+        trans = Translator(['python'], ['trololo'])
+        eq_(trans.translate_string(u'hello'),
+            u'trololo')

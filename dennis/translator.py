@@ -409,6 +409,14 @@ class PirateTransform(Transform):
         return u''.join(out)
 
 
+class TrololoTransform(Transform):
+    name = 'trololo'
+    desc = 'Translates text into Trololo. Hahaha! Hohoho!'
+
+    def transform(self, vartok, token_stream):
+        return [Token(u'trololo')]
+
+
 class HTMLExtractorTransform(HTMLParser.HTMLParser, Transform):
     name = 'html'
     desc = 'Tokenizes HTML bits so only text is translated.'
